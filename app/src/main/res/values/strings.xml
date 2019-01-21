@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CMERI Smart Parking</string>
+    <string name="welcome_string">Welcome to the CMERI Smart Parking Viewer</string>
+</resources>
