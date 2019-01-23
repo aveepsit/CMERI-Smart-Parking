@@ -4,4 +4,9 @@
     <string name="dash_office_btn">Office</string>
     <string name="dash_colony_btn">Colony</string>
     <string name="main_proceed_btn">PROCEED</string>
+    <string name="title_activity_office_view">Office Parking</string>
+    <string name="dash_title">Dashboard</string>
+    <string name="title_activity_parking_view">Parking Status</string>
+    <string name="colony_park_title">Colony Parking Status</string>
+    <string name="office_park_title">Office Parking Status</string>
 </resources>
