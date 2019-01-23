@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CMERI Smart Parking</string>
     <string name="welcome_string">Welcome to the CMERI Smart Parking Viewer</string>
+    <string name="dash_office_btn">Office</string>
+    <string name="dash_colony_btn">Colony</string>
+    <string name="main_proceed_btn">PROCEED</string>
 </resources>

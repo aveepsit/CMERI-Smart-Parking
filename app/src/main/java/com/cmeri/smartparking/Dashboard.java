@@ -1,27 +1,22 @@
 /*
  *      Created By: Aveepsit Chowdhury
- *      FIle Name: MainActivity.java
+ *      FIle Name: Dashboard.java
  *      Project Name: CMERI-Smart-Parking
- *      Created on: 20-01-2019 12:15 AM
+ *      Created on: 21-01-2019 06:57 PM
  *      Additional Notes:
  */
 
 package com.cmeri.smartparking;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dashboard);
     }
 
-    public void openDash(View view) {
-        startActivity(new Intent(this, Dashboard.class));
-    }
 }
