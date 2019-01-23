@@ -44,7 +44,7 @@ public class ParkingAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ps[i] = new ParkingSpot(context, i);
-        ps[i].setFree(stat[i]);
+        ps[i].setOccupied(stat[i]);
         return ps[i];
     }
 }

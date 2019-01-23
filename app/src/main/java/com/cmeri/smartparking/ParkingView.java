@@ -116,10 +116,10 @@ public class ParkingView extends AppCompatActivity {
                 for (int i = 0; i < parkCount; i++) {
                     if (!curStat[i] && (new_stat[i] == '1')) {
                         curStat[i] = true;
-                        ps[i].setFree(true);
+                        ps[i].setOccupied(true);
                     } else if (curStat[i] && (new_stat[i] == '0')) {
                         curStat[i] = false;
-                        ps[i].setFree(false);
+                        ps[i].setOccupied(false);
                     }
                 }
                 Snackbar.make(view, "Updated at " + timeUpd, Snackbar.LENGTH_SHORT)

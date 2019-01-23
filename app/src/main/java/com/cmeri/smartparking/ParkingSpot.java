@@ -28,20 +28,21 @@ public class ParkingSpot extends AppCompatTextView {
         //setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
         setText("S" + String.valueOf(pos + 1));
         setFocusable(false);
+        setClickable(false);
         setWidth(edgeSize);
         setHeight(edgeSize);
     }
 
-    boolean isFree() {
+    boolean isOccupied() {
         return state;
     }
 
-    void setFree(boolean b) {
+    void setOccupied(boolean b) {
         state = b;
         if (b) {
-            setBackgroundResource(R.color.free_grad_start);
-        } else {
             setBackgroundResource(R.color.occ_grad_start);
+        } else {
+            setBackgroundResource(R.color.free_grad_start);
         }
     }
 }
