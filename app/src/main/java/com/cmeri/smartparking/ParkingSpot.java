@@ -12,6 +12,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v7.widget.AppCompatTextView;
+import android.util.TypedValue;
+import android.view.Gravity;
 
 @SuppressLint("ViewConstructor")
 public class ParkingSpot extends AppCompatTextView {
@@ -24,8 +26,8 @@ public class ParkingSpot extends AppCompatTextView {
     public ParkingSpot(Context context, int pos) {
         super(context);
         setTypeface(null, Typeface.BOLD);
-        setTextAlignment(AppCompatTextView.TEXT_ALIGNMENT_CENTER);
-        //setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
+        setGravity(Gravity.CENTER);
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
         setText("S" + String.valueOf(pos + 1));
         setFocusable(false);
         setClickable(false);
