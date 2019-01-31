@@ -28,7 +28,7 @@ public class ParkingSpot extends AppCompatTextView {
         setTypeface(null, Typeface.BOLD);
         setGravity(Gravity.CENTER);
         setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
-        setText("S" + String.valueOf(pos + 1));
+        setText("S" + String.valueOf(pos));
         setFocusable(false);
         setClickable(false);
         setWidth(edgeSize);

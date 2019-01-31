@@ -18,12 +18,14 @@ public class ParkingAdapter extends BaseAdapter {
     private int parkCount;
     private ParkingSpot ps[];
     private boolean stat[];
+    private int dispNoStart;
 
-    ParkingAdapter(Context contextL, int parkCountL, ParkingSpot p[], boolean b[]) {
+    ParkingAdapter(Context contextL, int parkCountL, ParkingSpot p[], boolean b[], int dispStart) {
         context = contextL;
         parkCount = parkCountL;
         ps = p;
         stat = b;
+        dispNoStart = dispStart;
     }
 
     @Override
@@ -43,7 +45,7 @@ public class ParkingAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ps[i] = new ParkingSpot(context, i);
+        ps[i] = new ParkingSpot(context, dispNoStart + i);
         ps[i].setOccupied(stat[i]);
         return ps[i];
     }

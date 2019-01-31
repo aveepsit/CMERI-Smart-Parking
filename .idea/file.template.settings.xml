@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExportableFileTemplateSettings">
+    <internal_templates>
+      <template name="AnnotationType.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Class.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Enum.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Interface.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="XML Properties File.xml" reformat="true" live-template-enabled="true" enabled="true" />
+    </internal_templates>
+    <j2ee_templates>
+      <template name="Activity.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Application.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Broadcast_Receiver.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Fragment.java" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Service.java" reformat="true" live-template-enabled="true" enabled="true" />
+    </j2ee_templates>
+  </component>
+</project>

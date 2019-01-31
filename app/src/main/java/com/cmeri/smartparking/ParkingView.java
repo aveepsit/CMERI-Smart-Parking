@@ -23,19 +23,24 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class ParkingView extends AppCompatActivity {
-    public static final int OFFICE_PARKING = 1;
-    public static final int COLONY_PARKING = 2;
     // Set These Values:
     private final static String cmeri_andro_get_url = "http://cmerismartparking.xyz/new_andro_get.php";
     private final static int officeParkingCount = 100;
     private final static int colonyParkingCount = 100;
+    private final static int officeParkingNumberStart = 1;
+    private final static int colonyParkingNumberStart = 101;
     private final static int timeStrSize = 20;
+
+    public static final int OFFICE_PARKING = 1;
+    public static final int COLONY_PARKING = 2;
+
     private static int parkType = OFFICE_PARKING;
     private static int parkCount = officeParkingCount;
     private static int resIndStart = 3;
     private static int resIndEnd = resIndStart + officeParkingCount;
     private static int timeIndStart = 5 + officeParkingCount + colonyParkingCount;
     private static int timeIndEnd = timeIndStart + timeStrSize;
+    private static int countStart = officeParkingNumberStart;
     protected boolean curStat[];
     protected ParkingSpot ps[];
     protected WebsiteParser wp;
@@ -64,11 +69,13 @@ public class ParkingView extends AppCompatActivity {
             resIndStart = 3;
             resIndEnd = resIndStart + officeParkingCount;
             parkCount = officeParkingCount;
+            countStart = officeParkingNumberStart;
             setTitle(R.string.office_park_title);
         } else if (parkType == COLONY_PARKING) {
             resIndStart = 3 + (officeParkingCount + 1);
             resIndEnd = resIndStart + colonyParkingCount;
             parkCount = colonyParkingCount;
+            countStart = colonyParkingNumberStart;
             setTitle(R.string.colony_park_title);
         }
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -81,7 +88,7 @@ public class ParkingView extends AppCompatActivity {
         curStat = new boolean[parkCount];
         ps = new ParkingSpot[parkCount];
         GridView gv = findViewById(R.id.park_cont);
-        gv.setAdapter(new ParkingAdapter(this, parkCount, ps, curStat));
+        gv.setAdapter(new ParkingAdapter(this, parkCount, ps, curStat, countStart));
         fab.performClick();
     }
 
